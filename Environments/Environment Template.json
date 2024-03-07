@@ -1,0 +1,15 @@
+{
+  "name": "ENVIRONMENT_NAME",
+  "environment_variables": [
+    {
+      "name": "NotNeeded",
+      "value": "Invalid"
+    }
+  ],
+  "agents": [
+    "AGENT_NAME"
+  ],
+  "pipelines": [
+    "BRANCH_PIPELINE_TEMPLATE"
+  ]
+}

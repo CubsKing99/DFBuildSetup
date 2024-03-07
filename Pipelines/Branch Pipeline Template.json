@@ -1,0 +1,60 @@
+{
+  "group": "PIPELINE GROUP NAME",
+  "name": "BRANCH_PIPELINE_TEMPLATE",
+  "display_order_weight": -1.0,
+  "label_template": "BRANCH_PIPELINE_TEMPLATE Build ${COUNT}",
+  "lock_behavior": "unlockWhenFinished",
+  "timer": {
+    "spec": "0 0 2 ? * *",
+    "only_on_changes": false
+  },
+  "environment_variables": [
+    {
+      "name": "Workspace",
+      "value": ".\\Workspace.sws"
+    },
+    {
+      "name": "Output",
+      "value": "\\\\SERVERNAME\\BRANCH_PIPELINE_TEMPLATE\\"
+    }
+  ],
+  "parameters": [],
+  "materials": [],
+  "stages": [
+    {
+      "name": "BuildBRANCH_PIPELINE_TEMPLATE",
+      "fetch_materials": true,
+      "never_cleanup_artifacts": false,
+      "clean_working_directory": false,
+      "approval": {
+        "type": "manual",
+        "users": [],
+        "roles": [],
+        "allow_only_on_success": false
+      },
+      "environment_variables": [],
+      "jobs": [
+        {
+          "name": "Build",
+          "environment_variables": [],
+          "tabs": [],
+          "resources": [],
+          "artifacts": [],
+          "timeout": 0.0,
+          "tasks": [
+            {
+              "command": "echo",
+              "working_directory": "./",
+              "timeout": -1.0,
+              "arguments": [
+                "Hello World"
+              ],
+              "run_if": "passed",
+              "type": "exec"
+            }
+		  ]
+        }
+      ]
+    }
+  ]
+}
