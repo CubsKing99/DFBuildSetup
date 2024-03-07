@@ -1,0 +1,4 @@
+SET PATH=%DF24BIN%;%PATH%
+
+DFCOMPCONSOLE %1 -x %2 -e2p
+exit /b %ERRORLEVEL%

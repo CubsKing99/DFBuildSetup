@@ -1,0 +1,1 @@
+(robocopy %1 %2 %3 /S /E /XX /XD .git) ^& IF %ERRORLEVEL% LEQ 3 exit 0

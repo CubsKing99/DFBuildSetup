@@ -1,0 +1,1 @@
+(robocopy %1 %2 *.exe /S /E /XX) ^& IF %ERRORLEVEL% LEQ 3 exit /b 0
