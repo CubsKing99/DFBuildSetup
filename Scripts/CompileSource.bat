@@ -3,7 +3,7 @@ SET PATH=%DF24BIN%;%PATH%
 
 @ECHO on
 
-echo %PATH%
+REM echo %PATH%
 
 DFCOMPCONSOLE.exe %1.src -x %2 -e2fv2wCI2
 IF %ERRORLEVEL% GEQ 1 exit /b %ERRORLEVEL%
